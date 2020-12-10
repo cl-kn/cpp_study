@@ -10,9 +10,10 @@ public:
 
     //  コンストラクタ
     Human(char *name, int age);
-    ~Human();// デストラクタ
+    ~Human(); // デストラクタ
 };
 
+//コンストラクタ定義
 Human::Human(char *name, int age)
 {
     //  動的メモリ上に氏名を管理
@@ -20,6 +21,12 @@ Human::Human(char *name, int age)
 
     strcpy(mName, name); //  氏名の設定
     mAge = age;          //  年齢の設定
+}
+
+//デストラクタ定義
+Human::~Human()
+{
+    free(mName); //動的メモリをfree()で解放
 }
 
 int main()
