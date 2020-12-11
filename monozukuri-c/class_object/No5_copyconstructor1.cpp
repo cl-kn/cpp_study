@@ -64,8 +64,9 @@ int main(void)
     //************************************************************
     //コピーコンストラクタ定義の確認用
     POS posX(50, 10);
-    POS posXX = posX;
-    posXX = posX;
+    POS posXX = posX; //コピーコンストラクタの呼び出し
+    POS posXXX(posX); // () を使ったコピーコンストラクタ呼び出し
+    // posXX = posX;
 
     return 0;
 }
@@ -85,5 +86,6 @@ int main(void)
  *
  * const POS & ←同名クラスのconst付きの参照を指定
  *
+ * const定数を付けることで、コピー元のオブジェクトの書き換えを防止する
  *
 */
