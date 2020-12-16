@@ -1,7 +1,7 @@
 //***************************************************
 /** ハンドルのクラス化【C言語のハンドルをクラスで再構築】
  * https://monozukuri-c.com/langcpp-handle-to-class/
- * 12/14
+ * 12/14 ,12/16
  * 「BankAccount.h」「BankAccount.cpp」を使う側のプログラム
  */
 //***************************************************
@@ -12,7 +12,7 @@ int main()
 {
     //----------------------------------------
     //スタックメモリのクラスオブジェクトを生成
-    BankAccount no1_harry("Harry", 1234);
+    BankAccount no1_harry("Pochi", 1234);
 
     no1_harry.printBalance();
     no1_harry.depositMoney(5000);
