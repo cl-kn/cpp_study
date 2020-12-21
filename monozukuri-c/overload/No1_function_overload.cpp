@@ -1,7 +1,7 @@
 //***************************************************
 /** 関数のオーバーロード【同名の関数を複数定義できる機能】
  * https://monozukuri-c.com/langcpp-function-overload/
- * 12/17
+ * 12/17, 12/18
  */
 //***************************************************
 #include <stdio.h>
@@ -9,7 +9,7 @@
 class ANIMAL
 {
 public:
-    //const を付けることで警告を出さない
+    //const
     const char *dog;
     const char *cat;
 
@@ -20,7 +20,7 @@ public:
 //コンストラクタ１
 ANIMAL::ANIMAL(void)
 {
-    //C++で、文字列リテラルは const char 配列 である
+    //標準C++で、文字列リテラルは const char 配列
     this->dog = "dog";
     this->cat = "cat";
 }
