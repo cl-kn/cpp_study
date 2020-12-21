@@ -1,0 +1,29 @@
+コンパイラによって、ソースファイル内の関数名は規則により、別の名前に置き換えられている。これによってリンカは呼び出し元と関数定義を紐づけている
+
+※コンパイラにより、名前修飾のルールは変化する
+
+【例】
+?printNum@@YAXXZ	void printNum();
+?printNum@@YAHXZ	int printNum();
+?printNum@@YAXH@Z	void printNum(int);
+?printNum@@YAXHN@Z	void printNum(int, double);
+
+@ 戻り値・引数データ型・順番 @
+
+を表す
+
+D	char
+E	unsigned char
+F	short
+G	unsigned short
+H	int
+I	unsigned int
+J	long
+_J	long long
+K	unsigned long
+_K	unsigned long long
+M	float
+N	double
+X	void
+
+※どのコンパイラでも、それぞれのルールに従い引数・戻り値に関する情報を関数名に付与して、独自の名前を生成している

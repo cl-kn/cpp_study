@@ -1,9 +1,10 @@
 #include "POS.h"
-#include <stdlib.h>
+#include <stdio.h>
 
-int main() {
-    POS pos = POS();
+int main()
+{
+    POS pos;
     pos.setPos();
+    pos.printPos();
 
-    printf();
 }

@@ -1,3 +1,7 @@
+//***************************************************
+/** 12/21 */
+//***************************************************
+
 #ifndef POS_H
 #define POS_H
 
@@ -16,10 +20,14 @@ private:
     int y;
 
 public:
-    POS();
+    POS(); //コンストラクタ
+
+    //同名メンバ関数3つ（オーバーロード）
     void setPos();
     void setPos(int x, int y);
     void setPos(S_Pos3D pos3d);
-}
+
+    void printPos();
+};
 
 #endif
