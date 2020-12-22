@@ -17,4 +17,11 @@ public:
     POS2 operator+(int value);
 };
 
+class POS3
+{
+public:
+    int x = 0;
+    int y = 0;
+};
+
 #endif //POS2_H

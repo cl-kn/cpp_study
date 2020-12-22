@@ -11,6 +11,8 @@ int main()
     POS2 pos2; //座標２
     POS2 pos3;
 
+    POS3 pos3_1;
+
     pos1.setPos(100, 200);
     pos2.setPos(300, 400);
 
@@ -23,4 +25,6 @@ int main()
 
     printf("pos3.x: %d pos3.y: %d\n", pos3.x, pos3.y); // 400 , 600
     printf("pos2.x: %d pos2.y: %d\n", pos2.x, pos2.y); // 150 , 250
+
+    printf("pos3_1.x:%d\n", pos3_1.x);
 }
