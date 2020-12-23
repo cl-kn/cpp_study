@@ -9,7 +9,10 @@
 
 int main(void)
 {
-    // CCar car1;
+    CCar car1;
+    car1.supply(10);
+    car1.move();
+    car1.move();
 
     return 0;
 }
