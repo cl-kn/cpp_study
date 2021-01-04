@@ -12,23 +12,23 @@ int main(void)
     CDog *d1, *d2, *d3;
     d1 = new CDog();
 
-    d1->bark();
-    CDog::showNum();
+    d1->bark();      // 0 : bow wow
+    CDog::showNum(); //1
 
-    d2 = new CDog();
-    d3 = new CDog();
+    d2 = new CDog(); // d_id = 1 d_count = 2
+    d3 = new CDog(); // d_id = 2 d_count = 3
 
-    d2->bark();
-    d3->bark();
+    d2->bark(); // 1 : bow wow
+    d3->bark(); // 2 : bow wow
 
-    delete d1;
-    delete d2;
+    delete d1; // dog : 0 delete
+    delete d2; // dog : 1 delete
 
-    CDog::showNum();
+    CDog::showNum(); // 1
 
-    delete d3;
+    delete d3; // dog : 2 delete
 
-    CDog::showNum();
+    CDog::showNum(); // 0
 
     return 0;
 }
