@@ -2,7 +2,7 @@
 
 int main()
 {
-    int array[5] = { 0, 1, 2, 3, 4 };;
+    int array[5] = { 0, 1, 2, 3, 4 };
 
     int(*ptr)[5] = &array; // 配列へのポインター
 
