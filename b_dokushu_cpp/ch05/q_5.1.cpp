@@ -6,6 +6,9 @@
 //***************************************************
 
 #include <iostream>
+#include <vector>
+#include <iterator>
+#include <algorithm>
 
 // void swap(int *x, int *y)
 // {
@@ -32,6 +35,11 @@ void reverse(int *array, int arrNum)
     }
 }
 
+void print(int x)
+{
+    std::cout << x << " ";
+}
+
 int main(void)
 {
     int array[] = {0, 1, 2, 3, 4};
@@ -48,6 +56,29 @@ int main(void)
     for (int e : array)
     {
         std::cout << e << std::endl;
+    }
+
+    std::cout << std::endl;
+
+    //コンテナ
+    {
+        std::vector<int> v = {1, 2, 3};
+
+        decltype(v)::iterator first = std::begin(v);
+        decltype(v)::iterator last = std::end(v);
+
+        std::for_each(first, last, print);
+    }
+    std::cout << std::endl;
+
+    //組み込み配列
+    {
+        int ar[] = {4, 5, 6, 7, 8, 9, 10};
+
+        int *first = std::begin(ar);
+        int *last = std::end(ar);
+
+        std::for_each(first, last, print);
     }
 
     return 0;

@@ -37,10 +37,19 @@ int Triangle::base_length() const
 
 int main(void)
 {
-    Triangle tringles[] = {
+    //Triangleクラスコンストラクタに、3つのオブジェクトの高さ、底辺の長さを各々渡している
+    Triangle triangles[] = {
 
         Triangle{10, 20},
+        Triangle{30, 40},
+        Triangle{50, 60},
     };
+
+    // auto …型推論
+    for (auto &tri : triangles)
+    {
+        std::cout << "men" << (tri.base_length() * tri.height() / 2) << std::endl;
+    }
 
     return 0;
 }
