@@ -51,5 +51,6 @@ int main(void)
         std::cout << "men" << (tri.base_length() * tri.height() / 2) << std::endl;
     }
 
+
     return 0;
 }

@@ -1,13 +1,35 @@
-#ifndef INCLUDE_GUARD_CALC_HPP
-#define INCLUDE_GUARD_CALC_HPP
+//「ifndef」「define」 を利用したインクルードガード
 
-template <typename... Args>
-void func(Args... args) {}
+#ifndef INC_CALC_HPP
+#define INC_CALC_HPP
+
+// template <typename... Args>
+// void func(Args... args) {}
 
 class Calc
 {
+    //クラス内メンバ関数
 public:
-    double x, y, z, w;
+    int addInt(int x, int y)
+    {
+        return x + y;
+    }
+    int minusInt(int x, int y)
+    {
+        return x - y;
+    }
+    int kakeInt(int x, int y)
+    {
+        return x * y;
+    }
+    int waruInt(int x, int y)
+    {
+        if (x == 0 || y == 0)
+        {
+            return 0;
+        }
+        return x / y;
+    }
 };
 
-#endif INCLUDE_GUARD_CALC_HPP
+#endif //INC_CALC_HPP
