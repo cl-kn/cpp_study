@@ -43,6 +43,4 @@ void CCar::supply(int fuel)
 void CCar::printCarInfo()
 {
     std::cout << "****** car info ******" << std::endl;
-
-
 }
