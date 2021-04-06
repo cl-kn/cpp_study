@@ -23,15 +23,21 @@ Animal::~Animal() { std::cout << "call dest" << std::endl; };
 
 int main(void)
 {
-    std::cout << "before [new]" << std::endl;
-    Animal *animal = new Animal{};
-    std::cout << "after [new]" << std::endl;
+    std::cout << "before [new]" << std::endl; //動的確保前
+    Animal *animal = new Animal{};            //動的確保
+    std::cout << "after [new]" << std::endl;  //動的確保後
 
-    std::cout<< "before [delete]" << std::endl;
-    delete animal;
-    std::cout<< "after [delete]" << std::endl;
-
-    // delete animal;
+    std::cout << "before [delete]" << std::endl; //解放前
+    delete animal;                               //解放！[P]
+    std::cout << "after [delete]" << std::endl;  //解放後
 
     return 0;
 }
+
+/**
+ * [P]
+ * この delete animal がなければ、
+ * 動的確保したインスタンスが破棄されずに残り続けるメモリリークが発生
+ *
+ *
+*/
