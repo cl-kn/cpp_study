@@ -34,20 +34,20 @@ bool Integer::operator<(const Integer& rhs) const
 
 bool Integer::operator>(const Integer& rhs) const
 {
-    // 左右を入れ替えて小なりを呼ぶと大なりの結果になる
+    // 左右を入れ替えて小なり < を呼ぶと大なり > の結果になる
     return rhs < *this;
 }
 
 bool Integer::operator<=(const Integer& rhs) const
 {
-    // 大なりを否定した結果が小なりイコールの結果になる
+    //  を否定した結果が小なりイコール <= の結果になる
     return !(rhs < *this);
 }
 
 bool Integer::operator>=(const Integer& rhs) const
 {
-    // 左右を入れ替えて小なりイコールを呼ぶと
-    // 大なりイコールの結果になる
+    // 左右を入れ替えて小なりイコール <= を呼ぶと
+    // 大なりイコール >= の結果になる
     return rhs <= *this;
 }
 
